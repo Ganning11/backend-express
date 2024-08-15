@@ -35,6 +35,12 @@ router.post(
   userController.createUser
 );
 router.get("/admin/users/:id", verifyToken, userController.findUserById);
+router.put(
+  "/admin/users/:id",
+  verifyToken,
+  validateUser,
+  userController.updateUser
+);
 
 //export router
 module.exports = router;
