@@ -34,6 +34,7 @@ router.post(
   validateUser,
   userController.createUser
 );
+router.get("/admin/users/:id", verifyToken, userController.findUserById);
 
 //export router
 module.exports = router;
