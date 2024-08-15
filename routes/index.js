@@ -41,6 +41,7 @@ router.put(
   validateUser,
   userController.updateUser
 );
+router.delete("/admin/users/:id", verifyToken, userController.deleteUser);
 
 //export router
 module.exports = router;
